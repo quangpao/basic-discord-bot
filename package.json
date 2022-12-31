@@ -1,0 +1,11 @@
+{
+  "name": "discord-bot",
+  "packageManager": "yarn@3.3.0",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^14.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.31.0"
+  }
+}
