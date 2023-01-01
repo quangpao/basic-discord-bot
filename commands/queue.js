@@ -6,7 +6,7 @@ module.exports = {
 		.setName('queue')
 		.setDescription('Show the first 10 songs in the queue.'),
 	execute: async ({ client, interaction }) => {
-		const queue = client.player.getQueue(interaction.guild);
+		const queue = client.player.getQueue(interaction.guildId);
 
 		if (!queue || !queue.playing) {
 			await interaction.reply('There is no song playing');
@@ -20,7 +20,7 @@ module.exports = {
 		const currentSong = queue.current;
 
 		await interaction.reply({
-			embed: [
+			embeds: [
 				new EmbedBuilder()
 					.setDescription(`**Currently Playing: **\n\` ${currentSong.title} - <@${currentSong.requestBy.id}>\n\n**Queue:**\n${queueString}`)
 					.setThumbnail(currentSong.thumbnail),
