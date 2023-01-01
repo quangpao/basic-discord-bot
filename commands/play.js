@@ -55,7 +55,7 @@ module.exports = {
 			const url = interaction.options.getString('url');
 
 			const result = await client.player.search(url, {
-				requestBy: interaction.user,
+				requestedBy: interaction.user,
 				searchEngine: QueryType.YOUTUBE_VIDEO,
 			});
 
@@ -76,7 +76,7 @@ module.exports = {
 			const url = interaction.options.getString('url');
 
 			const result = await client.player.search(url, {
-				requestBy: interaction.user,
+				requestedBy: interaction.user,
 				searchEngine: QueryType.YOUTUBE_PLAYLIST,
 			});
 
@@ -97,7 +97,7 @@ module.exports = {
 			const searchterms = interaction.options.getString('searchterms');
 
 			const result = await client.player.search(searchterms, {
-				requestBy: interaction.user,
+				requestedBy: interaction.user,
 				searchEngine: QueryType.YOUTUBE_SEARCH,
 			});
 
